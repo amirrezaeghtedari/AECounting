@@ -17,7 +17,7 @@ class PermutationRepetition {
 		var result	= [[Int]]()
 		result.append(source)
 		
-		while let next = nextPermute(n: n, a: source) {
+		while let next = permuteNext(n: n, a: source) {
 			
 			source = next
 			result.append(source)
@@ -26,7 +26,7 @@ class PermutationRepetition {
 		return result
 	}
 	
-	private static func nextPermute(n: Int, a: [Int]) -> [Int]? {
+	private static func permuteNext(n: Int, a: [Int]) -> [Int]? {
 		
 		var source = a
 		
