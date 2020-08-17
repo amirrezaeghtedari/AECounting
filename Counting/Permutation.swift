@@ -10,7 +10,7 @@ import Foundation
 
 class Permutation {
 	
-	public static func removeSmallestMember(ofSpares spares: inout [Int]) -> Int? {
+	private static func removeSmallestMember(ofSpares spares: inout [Int]) -> Int? {
 		
 		if spares.count > 0 {
 			
@@ -24,7 +24,7 @@ class Permutation {
 		}
 	}
 	
-	public static func removeSmallestMember(ofSpares spares: inout [Int], greaterThan value: Int) -> Int? {
+	private static func removeSmallestMember(ofSpares spares: inout [Int], greaterThan value: Int) -> Int? {
 		
 		for r in 0..<spares.count {
 			
@@ -40,7 +40,7 @@ class Permutation {
 		return nil
 	}
 	
-	public static func insertAscending(to spares: inout [Int], value: Int) {
+	private static func insertAscending(to spares: inout [Int], value: Int) {
 		
 		guard let last = spares.last else {
 			
@@ -76,7 +76,7 @@ class Permutation {
 		}
 	}
 	
-	public static func permuteNext(a: [Int], spares: [Int]) -> ([Int], [Int])? {
+	private static func permuteNext(a: [Int], spares: [Int]) -> ([Int], [Int])? {
 		
 		var a = a
 		var spares = spares
@@ -146,7 +146,7 @@ class Permutation {
 		return nil
 	}
 	
-	static func permute(n: Int, r: Int) -> [[Int]] {
+	public static func permute(n: Int, r: Int) -> [[Int]] {
 		
 		guard r <= n else {
 			

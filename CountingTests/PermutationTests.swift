@@ -19,36 +19,6 @@ class PermutationTests: XCTestCase {
 
     }
 
-    func test_permuteNext() throws {
-	
-		let a1 = [1, 2, 3, 4]
-		let spares1 = [5, 6]
-		if let result1 = Permutation.permuteNext(a: a1, spares: spares1) {
-			
-			XCTAssert(result1.0 == [1, 2, 3, 5])
-			XCTAssert(result1.1 == [4, 6])
-		
-		} else {
-			
-			XCTFail()
-		}
-		
-		
-		
-		let a2 = [1, 2, 6, 5]
-		let spares2 = [3, 4]
-		
-		if let result2 = Permutation.permuteNext(a: a2, spares: spares2) {
-			
-			XCTAssert(result2.0 == [1, 3, 2, 4])
-			XCTAssert(result2.1 == [5, 6])
-		
-		} else {
-			
-			XCTFail()
-		}
-	}
-
 	func test_permute01() {
 		
 		let result = Permutation.permute(n: 3, r: 2)
