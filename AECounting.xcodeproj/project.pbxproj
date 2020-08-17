@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E112520724E56E73005F7C65 /* Counting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11251FE24E56E73005F7C65 /* Counting.framework */; };
+		E112520724E56E73005F7C65 /* AECounting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11251FE24E56E73005F7C65 /* AECounting.framework */; };
 		E112520C24E56E73005F7C65 /* PermuteRepetitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E112520B24E56E73005F7C65 /* PermuteRepetitionTests.swift */; };
 		E112520E24E56E73005F7C65 /* Counting.h in Headers */ = {isa = PBXBuildFile; fileRef = E112520024E56E73005F7C65 /* Counting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E112522224E57B63005F7C65 /* PermutationRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E112522124E57B63005F7C65 /* PermutationRepetition.swift */; };
@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E11251FE24E56E73005F7C65 /* Counting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Counting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E11251FE24E56E73005F7C65 /* AECounting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AECounting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E112520024E56E73005F7C65 /* Counting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Counting.h; sourceTree = "<group>"; };
 		E112520124E56E73005F7C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Counting/Support/Info.plist; sourceTree = SOURCE_ROOT; };
-		E112520624E56E73005F7C65 /* CountingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E112520624E56E73005F7C65 /* AECountingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AECountingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E112520B24E56E73005F7C65 /* PermuteRepetitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermuteRepetitionTests.swift; sourceTree = "<group>"; };
 		E112520D24E56E73005F7C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E112522124E57B63005F7C65 /* PermutationRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermutationRepetition.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E112520724E56E73005F7C65 /* Counting.framework in Frameworks */,
+				E112520724E56E73005F7C65 /* AECounting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +103,8 @@
 		E15C0B9024D84C6300393FC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E11251FE24E56E73005F7C65 /* Counting.framework */,
-				E112520624E56E73005F7C65 /* CountingTests.xctest */,
+				E11251FE24E56E73005F7C65 /* AECounting.framework */,
+				E112520624E56E73005F7C65 /* AECountingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,9 +123,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E11251FD24E56E73005F7C65 /* Counting */ = {
+		E11251FD24E56E73005F7C65 /* AECounting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E112520F24E56E73005F7C65 /* Build configuration list for PBXNativeTarget "Counting" */;
+			buildConfigurationList = E112520F24E56E73005F7C65 /* Build configuration list for PBXNativeTarget "AECounting" */;
 			buildPhases = (
 				E11251F924E56E73005F7C65 /* Headers */,
 				E11251FA24E56E73005F7C65 /* Sources */,
@@ -136,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = Counting;
+			name = AECounting;
 			productName = Counting;
-			productReference = E11251FE24E56E73005F7C65 /* Counting.framework */;
+			productReference = E11251FE24E56E73005F7C65 /* AECounting.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E112520524E56E73005F7C65 /* CountingTests */ = {
+		E112520524E56E73005F7C65 /* AECountingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E112521224E56E73005F7C65 /* Build configuration list for PBXNativeTarget "CountingTests" */;
+			buildConfigurationList = E112521224E56E73005F7C65 /* Build configuration list for PBXNativeTarget "AECountingTests" */;
 			buildPhases = (
 				E112520224E56E73005F7C65 /* Sources */,
 				E112520324E56E73005F7C65 /* Frameworks */,
@@ -154,9 +154,9 @@
 			dependencies = (
 				E112520924E56E73005F7C65 /* PBXTargetDependency */,
 			);
-			name = CountingTests;
+			name = AECountingTests;
 			productName = CountingTests;
-			productReference = E112520624E56E73005F7C65 /* CountingTests.xctest */;
+			productReference = E112520624E56E73005F7C65 /* AECountingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +177,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E15C0B8A24D84C6300393FC0 /* Build configuration list for PBXProject "Counting" */;
+			buildConfigurationList = E15C0B8A24D84C6300393FC0 /* Build configuration list for PBXProject "AECounting" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -190,8 +190,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E11251FD24E56E73005F7C65 /* Counting */,
-				E112520524E56E73005F7C65 /* CountingTests */,
+				E11251FD24E56E73005F7C65 /* AECounting */,
+				E112520524E56E73005F7C65 /* AECountingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,7 +239,7 @@
 /* Begin PBXTargetDependency section */
 		E112520924E56E73005F7C65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E11251FD24E56E73005F7C65 /* Counting */;
+			target = E11251FD24E56E73005F7C65 /* AECounting */;
 			targetProxy = E112520824E56E73005F7C65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -453,7 +453,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E112520F24E56E73005F7C65 /* Build configuration list for PBXNativeTarget "Counting" */ = {
+		E112520F24E56E73005F7C65 /* Build configuration list for PBXNativeTarget "AECounting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E112521024E56E73005F7C65 /* Debug */,
@@ -462,7 +462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E112521224E56E73005F7C65 /* Build configuration list for PBXNativeTarget "CountingTests" */ = {
+		E112521224E56E73005F7C65 /* Build configuration list for PBXNativeTarget "AECountingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E112521324E56E73005F7C65 /* Debug */,
@@ -471,7 +471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E15C0B8A24D84C6300393FC0 /* Build configuration list for PBXProject "Counting" */ = {
+		E15C0B8A24D84C6300393FC0 /* Build configuration list for PBXProject "AECounting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E15C0B9424D84C6300393FC0 /* Debug */,
