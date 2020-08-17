@@ -19,13 +19,10 @@ class PermutationTests: XCTestCase {
 
     }
 
-	func test_permute01() {
+	func test_permute() {
 		
-		let result = Permutation.permute(n: 3, r: 2)
-		XCTAssert(result.count == 6)
-	}
-
-	func test_permute02() {
+		let result0 = Permutation.permute(n: 3, r: 2)
+		XCTAssert(result0.count == 6)
 		
 		let result1 = Permutation.permute(n: 5, r: 2)
 		XCTAssert(result1.count == 20)
