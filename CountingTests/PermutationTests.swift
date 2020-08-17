@@ -57,22 +57,26 @@ class PermutationTests: XCTestCase {
 
 	func test_permute02() {
 		
-		let result = Permutation.permute(n: 5, r: 2)
-		print("Result1 count:", result.count)
-
-		XCTAssert(result.count == 20)
+		let result1 = Permutation.permute(n: 5, r: 2)
+		XCTAssert(result1.count == 20)
 		
 		let result2 = Permutation.permute(n: 5, r: 5)
-		print("Result2 count:", result2.count)
 
 		XCTAssert(result2.count == 120)
 		
 		let result3 = Permutation.permute(n: 4, r: 4)
-		print("result 3 count:", result3.count)
 		XCTAssert(result3.count == 24)
 		
 		let result4 = Permutation.permute(n: 4, r: 3)
-		print("result 4 count:", result4.count)
 		XCTAssert(result4.count == 24)
+		
+		let result5 = Permutation.permute(n: 10, r: 3)
+		XCTAssert(result5.count == 720)
+		
+		let result6 = Permutation.permute(n: 10, r: 11)
+		XCTAssert(result6.count == 0)
+		
+		let result7 = Permutation.permute(n: 1900, r: 1)
+		XCTAssert(result7.count == 1900)
 	}
 }

@@ -40,7 +40,7 @@ class Permutation {
 		return nil
 	}
 	
-	public static func insertSparesAscending(spares: inout [Int], value: Int) {
+	public static func insertAscending(to spares: inout [Int], value: Int) {
 		
 		guard let last = spares.last else {
 			
@@ -88,7 +88,7 @@ class Permutation {
 			if let smallerSpare = removeSmallestMember(ofSpares: &spares, greaterThan: m) {
 				
 				a[i] = smallerSpare
-				insertSparesAscending(spares: &spares, value: m)
+				insertAscending(to: &spares, value: m)
 				
 				for k in (i + 1)..<a.count {
 					
@@ -97,7 +97,7 @@ class Permutation {
 					if let smallestSpare = removeSmallestMember(ofSpares: &spares) {
 						
 						a[k] = smallestSpare
-						insertSparesAscending(spares: &spares, value: p)
+						insertAscending(to: &spares, value: p)
 					
 					} else {
 						
@@ -107,43 +107,39 @@ class Permutation {
 				}
 				
 				return (a, spares)
-			}
-		}
-		
-		//If there is no item in the spares that is bigger the main list members
-		for i in (0..<a.count).reversed() {
-			
-			guard i >= 1 else { return nil } // Reaching to the end of the list
-			
-			if a[i] > a[i - 1] {
 				
-				let m = a[i - 1]
+			} else { //There is no smaller member in spares for this item
 				
-				for j in i ..< a.count {
+				if i >= 1 && m > a[i - 1] {
 					
-					insertSparesAscending(spares: &spares, value: a[j])
-				}
-				
-				if let smallest = removeSmallestMember(ofSpares: &spares, greaterThan: a[i - 1]) {
-				
-					a[i - 1] = smallest
-					insertSparesAscending(spares: &spares, value: m)
-				}
-				
-				for k in i..<a.count {
+					let n = a[i - 1]
 					
-					if let smallestSpare = removeSmallestMember(ofSpares: &spares) {
+					for j in i ..< a.count {
 						
-						a[k] = smallestSpare
-					
-					} else {
-						
-						break
+						insertAscending(to: &spares, value: a[j])
 					}
+					
+					if let smallest = removeSmallestMember(ofSpares: &spares, greaterThan: a[i - 1]) {
+					
+						a[i - 1] = smallest
+						insertAscending(to: &spares, value: n)
+					}
+					
+					for k in i..<a.count {
+						
+						if let smallestSpare = removeSmallestMember(ofSpares: &spares) {
+							
+							a[k] = smallestSpare
+						
+						} else {
+							
+							break
+						}
 
+					}
+					
+					return (a, spares)
 				}
-				
-				return (a, spares)
 			}
 		}
 		
@@ -170,8 +166,6 @@ class Permutation {
 			}
 		}
 		
-		print("Source:", source, "Spares:", spares)
-		
 		var result = [source]
 		
 		while let next = permuteNext(a: source, spares: spares) {
@@ -179,7 +173,6 @@ class Permutation {
 			source = next.0
 			spares = next.1
 			result.append(source)
-			print("Source:", source, "Spares:", spares)
 		}
 		
 		return result
