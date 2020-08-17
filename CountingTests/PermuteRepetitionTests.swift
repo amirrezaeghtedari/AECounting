@@ -22,9 +22,6 @@ class PermuteRepetitionTests: XCTestCase {
     func testExample() throws {
         
 		let result = PermutationRepetition.permuteRepetition(n: 5, r: 4)
-		for i in result {
-			print(i)
-		}
 		XCTAssert(result.count == 256)
     }
 }
