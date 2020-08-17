@@ -10,7 +10,7 @@ import Foundation
 
 class CombinationRepetition {
 	
-	static public func combinateRepetition(n: Int, r: Int) -> [[Int]] {
+	static public func combineRepetition(n: Int, r: Int) -> [[Int]] {
 		
 		var a = [Int]()
 		
@@ -20,7 +20,7 @@ class CombinationRepetition {
 		
 		var result = [a]
 		
-		while let next = nextCombinateRepetition(n: n, a: a) {
+		while let next = combineNext(n: n, a: a) {
 			result.append(next)
 			a = next
 		}
@@ -28,7 +28,7 @@ class CombinationRepetition {
 		return result
 	}
 
-	static private func nextCombinateRepetition(n: Int, a: [Int]) -> [Int]? {
+	static private func combineNext(n: Int, a: [Int]) -> [Int]? {
 		
 		var a = a
 		let r = a.count

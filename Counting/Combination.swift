@@ -10,7 +10,7 @@ import Foundation
 
 class Combination {
 	
-	static public func combinate(n: Int, r: Int) -> [[Int]] {
+	static public func combine(n: Int, r: Int) -> [[Int]] {
 		
 		var a = [Int]()
 		
@@ -20,7 +20,7 @@ class Combination {
 		
 		var result = [a]
 		
-		while let next = nextCombinate(n: n, a: a) {
+		while let next = combineNext(n: n, a: a) {
 			result.append(next)
 			a = next
 		}
@@ -28,7 +28,7 @@ class Combination {
 		return result
 	}
 	
-	static private func nextCombinate(n: Int, a: [Int]) -> [Int]? {
+	static private func combineNext(n: Int, a: [Int]) -> [Int]? {
 		
 		var a = a
 		let r = a.count
