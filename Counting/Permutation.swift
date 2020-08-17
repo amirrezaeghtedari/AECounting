@@ -1,0 +1,188 @@
+//
+//  Permutation.swift
+//  Counting
+//
+//  Created by Amirreza Eghtedari on 5/24/1399 AP.
+//  Copyright © 1399 AP Amirreza Eghtedari. All rights reserved.
+//
+
+import Foundation
+
+class Permutation {
+	
+	public static func removeSmallestMember(ofSpares spares: inout [Int]) -> Int? {
+		
+		if spares.count > 0 {
+			
+			let smallest = spares[0]
+			spares.remove(at: 0)
+			return smallest
+		
+		} else {
+			
+			return nil
+		}
+	}
+	
+	public static func removeSmallestMember(ofSpares spares: inout [Int], greaterThan value: Int) -> Int? {
+		
+		for r in 0..<spares.count {
+			
+			let p = spares[r]
+			
+			if value < p {
+			
+				spares.remove(at: r)
+				return p
+			}
+		}
+		
+		return nil
+	}
+	
+	public static func insertSparesAscending(spares: inout [Int], value: Int) {
+		
+		guard let last = spares.last else {
+			
+			spares.insert(value, at: 0)
+			return
+		}
+		
+		guard  value < last else {
+			
+			spares.append(value)
+			return
+		}
+		
+		for s in (0..<spares.count) {
+			
+			if s == 0 && value < spares[s] { // value is less than the first item
+				
+				spares.insert(value, at: 0)
+				break
+			}
+			
+			if s == spares.count - 1 && value > spares[s] { //value is more than the last item
+				
+				spares.append(value)
+				break
+			}
+			
+			if spares[s] < value && value < spares[s + 1] { // value is between two subsiquent items
+				
+				spares.insert(value, at: s + 1)
+				break
+			}
+		}
+	}
+	
+	public static func permuteNext(a: [Int], spares: [Int]) -> ([Int], [Int])? {
+		
+		var a = a
+		var spares = spares
+		
+		for i in (0..<a.count).reversed() {
+			
+			let m = a[i]
+			
+			if let smallerSpare = removeSmallestMember(ofSpares: &spares, greaterThan: m) {
+				
+				a[i] = smallerSpare
+				insertSparesAscending(spares: &spares, value: m)
+				
+				for k in (i + 1)..<a.count {
+					
+					let p = a[k]
+					
+					if let smallestSpare = removeSmallestMember(ofSpares: &spares) {
+						
+						a[k] = smallestSpare
+						insertSparesAscending(spares: &spares, value: p)
+					
+					} else {
+						
+						break
+					}
+
+				}
+				
+				return (a, spares)
+			}
+		}
+		
+		//If there is no item in the spares that is bigger the main list members
+		for i in (0..<a.count).reversed() {
+			
+			guard i >= 1 else { return nil } // Reaching to the end of the list
+			
+			if a[i] > a[i - 1] {
+				
+				let m = a[i - 1]
+				
+				for j in i ..< a.count {
+					
+					insertSparesAscending(spares: &spares, value: a[j])
+				}
+				
+				if let smallest = removeSmallestMember(ofSpares: &spares, greaterThan: a[i - 1]) {
+				
+					a[i - 1] = smallest
+					insertSparesAscending(spares: &spares, value: m)
+				}
+				
+				for k in i..<a.count {
+					
+					if let smallestSpare = removeSmallestMember(ofSpares: &spares) {
+						
+						a[k] = smallestSpare
+					
+					} else {
+						
+						break
+					}
+
+				}
+				
+				return (a, spares)
+			}
+		}
+		
+		return nil
+	}
+	
+	static func permute(n: Int, r: Int) -> [[Int]] {
+		
+		guard r <= n else {
+			
+			return [[Int]]()
+		}
+		
+		var source 	= [Int]()
+		var spares	= [Int]()
+		
+		for i in 1...r {
+			source.append(i)
+		}
+		
+		if r < n {
+			for j in (r + 1)...n {
+				spares.append(j)
+			}
+		}
+		
+		print("Source:", source, "Spares:", spares)
+		
+		var result = [source]
+		
+		while let next = permuteNext(a: source, spares: spares) {
+			
+			source = next.0
+			spares = next.1
+			result.append(source)
+			print("Source:", source, "Spares:", spares)
+		}
+		
+		return result
+	}
+}
+
