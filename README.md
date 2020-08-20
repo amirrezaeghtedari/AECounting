@@ -12,9 +12,9 @@ This is a framework developed in Swift for calculating permutation and combinati
 The Int values in the result can be assigned to the real-world problem items respectively.
 
 ## Functions
-public static func permute(n: Int, r: Int) -> [[Int]]
-public static func permuteRepetition(n: Int, r: Int) -> [[Int]]
-public static func combine(n: Int, r: Int) -> [[Int]]
-public static func combineRepetition(n: Int, r: Int) -> [[Int]]
+* public static func permute(n: Int, r: Int) -> [[Int]]
+* public static func permuteRepetition(n: Int, r: Int) -> [[Int]]
+* public static func combine(n: Int, r: Int) -> [[Int]]
+* public static func combineRepetition(n: Int, r: Int) -> [[Int]]
 
 

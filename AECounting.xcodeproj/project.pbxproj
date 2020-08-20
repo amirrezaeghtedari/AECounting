@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1063A3424EE61630091611B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E1063A3324EE61630091611B /* README.md */; };
 		E112520724E56E73005F7C65 /* AECounting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11251FE24E56E73005F7C65 /* AECounting.framework */; };
 		E112520C24E56E73005F7C65 /* PermuteRepetitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E112520B24E56E73005F7C65 /* PermuteRepetitionTests.swift */; };
 		E112520E24E56E73005F7C65 /* Counting.h in Headers */ = {isa = PBXBuildFile; fileRef = E112520024E56E73005F7C65 /* Counting.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1063A3324EE61630091611B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E11251FE24E56E73005F7C65 /* AECounting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AECounting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E112520024E56E73005F7C65 /* Counting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Counting.h; sourceTree = "<group>"; };
 		E112520124E56E73005F7C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Counting/Support/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -94,6 +96,7 @@
 		E15C0B8624D84C6300393FC0 = {
 			isa = PBXGroup;
 			children = (
+				E1063A3324EE61630091611B /* README.md */,
 				E11251FF24E56E73005F7C65 /* Counting */,
 				E112520A24E56E73005F7C65 /* CountingTests */,
 				E15C0B9024D84C6300393FC0 /* Products */,
@@ -201,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1063A3424EE61630091611B /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
