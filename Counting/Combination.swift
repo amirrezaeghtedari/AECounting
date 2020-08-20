@@ -12,6 +12,11 @@ class Combination {
 	
 	public static func combine(n: Int, r: Int) -> [[Int]] {
 		
+		guard n > 0, r > 0 else {
+			
+			return [[Int]]()
+		}
+		
 		var a = [Int]()
 		
 		for i in 1...r {
@@ -19,10 +24,12 @@ class Combination {
 		}
 		
 		var result = [a]
+		print(a)
 		
 		while let next = combineNext(n: n, a: a) {
 			result.append(next)
 			a = next
+			print(a)
 		}
 		
 		return result
@@ -33,15 +40,19 @@ class Combination {
 		var a = a
 		let r = a.count
 		var i = a.count
-		
+
 		while a[i - 1] == n - r + i {
-			
+
 			i -= 1
-			
+
 			if i == 0 { return nil }
 		}
 		
 		a[i - 1] += 1
+		
+		for j in i..<r {
+			a[j] = a[j - 1] + 1
+		}
 		
 		return a
 	}
