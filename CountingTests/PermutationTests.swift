@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Counting
+@testable import AECounting
 
 class PermutationTests: XCTestCase {
 

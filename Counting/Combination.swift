@@ -10,7 +10,7 @@ import Foundation
 
 class Combination {
 	
-	static public func combine(n: Int, r: Int) -> [[Int]] {
+	public static func combine(n: Int, r: Int) -> [[Int]] {
 		
 		var a = [Int]()
 		

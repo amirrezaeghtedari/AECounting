@@ -10,7 +10,7 @@ import Foundation
 
 class CombinationRepetition {
 	
-	static public func combineRepetition(n: Int, r: Int) -> [[Int]] {
+	public static func combineRepetition(n: Int, r: Int) -> [[Int]] {
 		
 		var a = [Int]()
 		

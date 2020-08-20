@@ -10,7 +10,7 @@ import Foundation
 
 class PermutationRepetition {
 
-	static public func permuteRepetition(n: Int, r: Int) -> [[Int]] {
+	public static func permuteRepetition(n: Int, r: Int) -> [[Int]] {
 		
 		var source = Array.init(repeating: 1, count: r)
 		
