@@ -16,6 +16,8 @@
 		E112522624E57BE9005F7C65 /* CombinationRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E112522524E57BE9005F7C65 /* CombinationRepetition.swift */; };
 		E197668224E6CA4A0034CB7B /* Permutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197668124E6CA4A0034CB7B /* Permutation.swift */; };
 		E197668424E6CC950034CB7B /* PermutationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197668324E6CC950034CB7B /* PermutationTests.swift */; };
+		E1E6DFC024EE916700767B2B /* CombineRepetitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6DFBF24EE916700767B2B /* CombineRepetitionTests.swift */; };
+		E1E6DFC224EE9C3700767B2B /* CombinationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6DFC124EE9C3700767B2B /* CombinationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		E112522524E57BE9005F7C65 /* CombinationRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationRepetition.swift; sourceTree = "<group>"; };
 		E197668124E6CA4A0034CB7B /* Permutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permutation.swift; sourceTree = "<group>"; };
 		E197668324E6CC950034CB7B /* PermutationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermutationTests.swift; sourceTree = "<group>"; };
+		E1E6DFBF24EE916700767B2B /* CombineRepetitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineRepetitionTests.swift; sourceTree = "<group>"; };
+		E1E6DFC124EE9C3700767B2B /* CombinationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				E197668324E6CC950034CB7B /* PermutationTests.swift */,
 				E112520B24E56E73005F7C65 /* PermuteRepetitionTests.swift */,
+				E1E6DFC124EE9C3700767B2B /* CombinationTests.swift */,
+				E1E6DFBF24EE916700767B2B /* CombineRepetitionTests.swift */,
 				E112520D24E56E73005F7C65 /* Info.plist */,
 			);
 			path = CountingTests;
@@ -234,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E197668424E6CC950034CB7B /* PermutationTests.swift in Sources */,
+				E1E6DFC024EE916700767B2B /* CombineRepetitionTests.swift in Sources */,
 				E112520C24E56E73005F7C65 /* PermuteRepetitionTests.swift in Sources */,
+				E1E6DFC224EE9C3700767B2B /* CombinationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
