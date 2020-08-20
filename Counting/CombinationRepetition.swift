@@ -22,13 +22,11 @@ class CombinationRepetition {
 			a.append(1)
 		}
 		
-		print(a)
 		var result = [a]
 		
 		while let next = combineNext(n: n, a: a) {
 			result.append(next)
 			a = next
-			print(a)
 		}
 		
 		return result
