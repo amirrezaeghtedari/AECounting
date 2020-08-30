@@ -36,10 +36,12 @@ class PermutationRepetition {
 				
 				source[i] += 1
 				
-				for j in (i + 1) ..< n - 1 {
+				var j = i + 1
+				while j < a.count {
 					source[j] = 1
+					j += 1
 				}
-	
+				
 				return source
 			}
 		}
