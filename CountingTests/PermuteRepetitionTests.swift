@@ -29,5 +29,8 @@ class PermuteRepetitionTests: XCTestCase {
 		
 		let result3 = PermutationRepetition.permuteRepetition(n: 2, r: 3)
 		XCTAssertEqual(result3.count, 8)
+		
+		let result4 = PermutationRepetition.permuteRepetition(n: 4, r: 3)
+		XCTAssertEqual(result4.count, 64)
     }
 }
