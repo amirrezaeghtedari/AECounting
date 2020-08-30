@@ -32,7 +32,7 @@ class PermutationRepetition {
 		
 		for i in (0..<a.count).reversed() {
 			
-			if source[i] < a.count {
+			if source[i] < n {
 				
 				source[i] += 1
 				
